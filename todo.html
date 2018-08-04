@@ -2,199 +2,187 @@
 <html>
 <head>
 	<title>101 Lily Bay</title>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 		<link href="lightbox.css" rel="stylesheet" id="bootstrap-css">
-	<script src="lightbox.js"></script>
 	<style type="text/css">
-		 body{margin:50px;}
-      #accordion .glyphicon { margin-right:10px; }
-      .panel-collapse>.list-group .list-group-item:first-child {border-top-right-radius: 0;border-top-left-radius: 0;}
-      .panel-collapse>.list-group .list-group-item {border-width: 1px 0;}
-      .panel-collapse>.list-group {margin-bottom: 0;}
-      .panel-collapse .list-group-item {border-radius:0;}
+		 body{
+    margin:50px;
+     font-family: 'Montserrat', sans-serif;
+}
+ #accordion .glyphicon {
+     margin-right:10px;
+}
+ .panel-collapse>.list-group .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+ .panel-collapse>.list-group .list-group-item {
+    border-width: 1px 0;
+}
+ .panel-collapse>.list-group {
+    margin-bottom: 0;
+}
+ .panel-collapse .list-group-item {
+    border-radius:0;
+}
+ .panel-collapse .list-group .list-group {
+    margin: 0;
+    margin-top: 10px;
+}
+ .panel-collapse .list-group-item li.list-group-item {
+    margin: 0 -15px;
+    border-top: 1px solid #ddd !important;
+    border-bottom: 0;
+    padding-left: 30px;
+}
+/*.panel-collapse .list-group-item li.list-group-item:last-child {
+    padding-bottom: 0;
+}
+*/
+ .panel-collapse div.list-group div.list-group{
+    margin: 0;
+    /*margin-bottom:15px;
+    */
+}
+ .panel-collapse div.list-group .list-group a.list-group-item {
+    border-top: 1px solid #ddd !important;
+    border-bottom: 0;
+    padding-left: 30px;
+}
+ .panel-collapse .list-group-item li.list-group-item {
+    border-top: 1px solid #DDD !important;
+}
+ .list-group img {
+ 	 max-width: 100%;
+     max-height: 300px;
+}
+ .panel-primary>.panel-heading {
+     background-color: #005b9c;
+}
+ .panel-default>.panel-heading {
+     background-color: rgba(0,91,156,.2);
+}
+ .panel-default {
+     padding-left: 0px;
+}
+ ul.list-group {
+     list-style: none;
+     margin-bottom: 15px;
+}
+ .instructions>.panel-heading {
+     background-color: #e8e8e8 !important;
+}
+ .panel-group .panel {
+     box-shadow: -4px -4px 2px #bdbdbd;
+     margin-bottom: 12px;
+     border: 2px solid #cccccc;
+}
+ .panel-group .panel-primary {
+     margin-bottom: 15px;
+     border: 2px solid #00779c;
+     box-shadow: -6px -6px 3px #bdbdbd;
+}
+ .panel-title>a {
+     font-size: 19px;
+}
+ .panel-primary h2 {
+     font-weight: 700;
+     letter-spacing: 3px;
+}
+ .instructions .panel-title {
+     font-size: 20px;
+}
+ @media only screen and (max-width: 1080px) {
+ 	body {
+ 		margin: 25px;
+ 	}
+ }
+  @media only screen and (max-width: 780px) {
+ 	body {
+ 		margin: 25px;
+ 	}
+ }
+ @media only screen and (max-width: 600px) and (min-width: 250px) {
+ 	body {
+ 		margin: 0px;
+ 	}
+     .panel-title>a, .panel-title, .instructions .panel-title {
 
-      .panel-collapse .list-group .list-group {margin: 0;margin-top: 10px;}
-      .panel-collapse .list-group-item li.list-group-item {margin: 0 -15px;border-top: 1px solid #ddd !important;border-bottom: 0;padding-left: 30px;}
-      .panel-collapse .list-group-item li.list-group-item:last-child {padding-bottom: 0;}
+ 	}
+    }
+     .panel-primary h2 {
+         font-size: 65px;
+    }
+     .panel-group {
+         margin: 20px 30px 20px 30px;
+    }
+     .panel-heading {
+         padding: 15px;
+    }
+    .no-border {
+    	border: none;
+    }
+    .back-to-top {
+    	cursor: pointer;
+    	margin: 15px 0px;
+    	height: 35px;
+    }
+    .list-group-item-heading {
+    	font-size: 18px;
+    }
+    .list-group-item .outside-link {
+    	font-size: 12px;
+    	padding: 0px;
+    	margin: 0px;
+    	max-width: 60px;
+    	margin-bottom: 12px;
+    }
+    .details {
+    	margin-bottom: 6px;
+    }
+    .panel-default .complete {
+    	background-color: rgba(0,156,149, .3);
+    }
+    .panel-default .urgent {
+    	background-color: rgba(156,0,90, .3);
+    }
+}
 
-      .panel-collapse div.list-group div.list-group{margin: 0;}
-      .panel-collapse div.list-group .list-group a.list-group-item {border-top: 1px solid #ddd !important;border-bottom: 0;padding-left: 30px;}
-      .panel-collapse .list-group-item li.list-group-item {border-top: 1px solid #DDD !important;}
-      .list-group img { width: 100%; }
-	</style>
+</style>
+<script type="text/javascript" src="todo.js"></script>
 </head>
 <body>
 
-<div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-md-3">
-          <div class="panel-group" id="accordion">
-          	<div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Window shades/coverings</a>
-                </h4>
-              </div>
-              <div id="collapseOne" class="panel-collapse collapse">
-                <div class="list-group">
-                  <a href="#" class="list-group-item">Pathway/patio</a>
-                  <div class="list-group">
-                  	<a href="#" class="list-group-item">Pavers</a>
-                  	<a href="#" class="list-group-item">Flagstone</a>
-                    <a href="#" class="list-group-item">Patterned stones</a>
-                    <a href="#" class="list-group-item">Moulding</a>
-                    <a href="#" class="list-group-item">Cobblestone</a>
-                  </div>
-                  <a href="#" class="list-group-item">Trees</a>
-                  <a href="#" class="list-group-item">Bush/trees to cover living room windows</a>
-                  <a href="#" class="list-group-item">Pergola?</a>
-                  <a href="#" class="list-group-item">Area for Peyton</a>
-                </div>
-              </div>
+<div class="">
+   <div class="row lily-bay">
+      <div class="col-sm-12 col-md-12 col-sm-12" align="center">
+         <div class="panel-group" id="accordion">
+            <div class="panel panel-primary">
+               <div class="panel-heading">
+                  <h2>101 Lily Bay</h2>
+               </div>
             </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-folder-close">
-                    </span>Barn style bathroom door</a>
-                </h4>
-			  </div>
-			  <div id="collapseTwo" class="panel-collapse collapse">
-                <div class="list-group">
-                  <a href="#" class="list-group-item">Low profile/hidden tracks</a>
-                  <div class="list-group">
-                  	<a href="#" class="list-group-item"><img src="images/barndoor.jpg" /></a>
-                  	<a href="#" class="list-group-item"><img src="images/barndoor2.jpg" /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-folder-close">
-                    </span>Outdoor furniture</a>
-                </h4>
-              </div>
-              <div id="collapseThree" class="panel-collapse collapse">
-                <div class="list-group">
-                  <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">List group item heading</h4>
-                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                  </a>
-                </div>
-                <div class="list-group">
-                  <a href="#" class="list-group-item active">
-                    <h4 class="list-group-item-heading">List group item heading</h4>
-                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                  </a>
-                </div>
-                <div class="list-group">
-                  <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">List group item heading</h4>
-                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                  </a>
-                </div> 
-              </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Indoor paint</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Backsplash</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Fridge</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Washer/dryer</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Bed for Mason</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Kitchen table/chairs</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Stools</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Couch/Sectional/Seats</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Backyard</a>
-                </h4>
-			  </div>
-            </div>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close">
-                    </span>Barn style bathroom door</a>
-                </h4>
-			  </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-9 col-md-9">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Dashboard</h3>
-            </div>
-            <div class="panel-body">
-              <p>Admin Dashboard Accordion List Group Menu</p>
-              <div class="alert alert-success"><h3>Yes! It's compatible with BS 3.0.3, 3.1 & 3.2 </h3></div>
-            </div>
-          </div>
-        </div>
+            <ul class="list-group">
+            <li class="panel panel-default instructions">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <div data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><span>
+                        </span>Select a category to expand folder, click an image to enlarge, or click link to open page.
+                     </div>
+                  </h4>
+               </div>
+            </li>
+         </ul>
       </div>
-    </div>
+   </div>
+</div>
+<div id="images" hidden>
+</div>
+</div>
+    <script src="lightbox.js"></script>
 </body>
 </html>
 <!-- 	<div class="container">

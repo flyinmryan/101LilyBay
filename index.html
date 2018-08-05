@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>101 Lily Bay</title>
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-		<link href="lightbox.css" rel="stylesheet" id="bootstrap-css">
-	<style type="text/css">
-		 body{
+    <title>101 Lily Bay</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <link href="lightbox.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+         body{
     margin:50px;
      font-family: 'Montserrat', sans-serif;
 }
@@ -56,14 +56,14 @@
     border-top: 1px solid #DDD !important;
 }
  .list-group img {
- 	 max-width: 100%;
+     max-width: 100%;
      max-height: 300px;
 }
  .panel-primary>.panel-heading {
-     background-color: #005b9c;
+     background-color: rgba(0,91,156,.5);
 }
  .panel-default>.panel-heading {
-     background-color: rgba(0,91,156,.2);
+     background-color: rgba(0,91,156,.1);
 }
  .panel-default {
      padding-left: 0px;
@@ -96,22 +96,22 @@
      font-size: 20px;
 }
  @media only screen and (max-width: 1080px) {
- 	body {
- 		margin: 25px;
- 	}
+    body {
+        margin: 25px;
+    }
  }
   @media only screen and (max-width: 780px) {
- 	body {
- 		margin: 25px;
- 	}
+    body {
+        margin: 25px;
+    }
  }
  @media only screen and (max-width: 600px) and (min-width: 250px) {
- 	body {
- 		margin: 0px;
- 	}
+    body {
+        margin: 0px;
+    }
      .panel-title>a, .panel-title, .instructions .panel-title {
 
- 	}
+    }
     }
      .panel-primary h2 {
          font-size: 65px;
@@ -123,31 +123,41 @@
          padding: 15px;
     }
     .no-border {
-    	border: none;
+        border: none;
     }
     .back-to-top {
-    	cursor: pointer;
-    	margin: 15px 0px;
-    	height: 35px;
+        cursor: pointer;
+        margin: 15px 0px;
+        height: 35px;
     }
     .list-group-item-heading {
-    	font-size: 18px;
+        font-size: 18px;
     }
     .list-group-item .outside-link {
-    	font-size: 12px;
-    	padding: 0px;
-    	margin: 0px;
-    	max-width: 60px;
-    	margin-bottom: 12px;
+        font-size: 12px;
+        padding: 0px;
+        margin: 0px;
+        max-width: 60px;
+        margin-bottom: 12px;
     }
     .details {
-    	margin-bottom: 6px;
+        margin-bottom: 6px;
     }
     .panel-default .complete {
-    	background-color: rgba(0,156,149, .3);
+        background-color: rgba(0,156,149, .3);
     }
     .panel-default .urgent {
-    	background-color: rgba(156,0,90, .3);
+        background-color: rgba(156,0,90, .3);
+    }
+    .panel.inactive {
+        background-color: white;
+        color: lightgray;
+    }
+    .badge {
+        position: relative;
+        top: -3px;
+        padding: 5px 7px;
+        margin-left: 15px;
     }
 }
 
@@ -185,31 +195,31 @@
     <script src="lightbox.js"></script>
 </body>
 </html>
-<!-- 	<div class="container">
-		  <div class="row">
-    		<div class="col-sm-12">
-				<h1>101 Lily Bay TODO list</h1>
-				<ul id="todo" class="list-group">
-					<li class="list-group-item">Barn style bathroom door</li>
-					<li class="list-group-item">Window shades/coverings</li>
-					<li class="list-group-item">Outdoor furniture</li>
-					<li class="list-group-item">Interior paint</li>
-					<li class="list-group-item">Backsplash</li>
-					<li class="list-group-item">Fridge - LABOR DAY old models</li>
-					<li class="list-group-item">Washer/dryer - LABOR DAY old models</li>
-					<li class="list-group-item">Bed for Mason</li>
-					<li class="list-group-item">Stools</li>
-					<li class="list-group-item">Kitchen table and chairs</li>
-					<li class="list-group-item">Couch/Sectional/Seat(s)</li>
-					<li class="list-group-item">Backyard ideas</li>
-						<ul class="list-group" hidden>
-							<li class="list-group-item">Blueberry tree</li>
-							<li class="list-group-item">Fern pine (potocarpus)</li>
-						</ul>
-					<li class="list-group-item">Paths</li>
-					<li class="list-group-item">Plants</li>
-					<li class="list-group-item">Trees</li>
-				</ul>
-			</div>
-		</div>
-	</div> -->
+<!--    <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+                <h1>101 Lily Bay TODO list</h1>
+                <ul id="todo" class="list-group">
+                    <li class="list-group-item">Barn style bathroom door</li>
+                    <li class="list-group-item">Window shades/coverings</li>
+                    <li class="list-group-item">Outdoor furniture</li>
+                    <li class="list-group-item">Interior paint</li>
+                    <li class="list-group-item">Backsplash</li>
+                    <li class="list-group-item">Fridge - LABOR DAY old models</li>
+                    <li class="list-group-item">Washer/dryer - LABOR DAY old models</li>
+                    <li class="list-group-item">Bed for Mason</li>
+                    <li class="list-group-item">Stools</li>
+                    <li class="list-group-item">Kitchen table and chairs</li>
+                    <li class="list-group-item">Couch/Sectional/Seat(s)</li>
+                    <li class="list-group-item">Backyard ideas</li>
+                        <ul class="list-group" hidden>
+                            <li class="list-group-item">Blueberry tree</li>
+                            <li class="list-group-item">Fern pine (potocarpus)</li>
+                        </ul>
+                    <li class="list-group-item">Paths</li>
+                    <li class="list-group-item">Plants</li>
+                    <li class="list-group-item">Trees</li>
+                </ul>
+            </div>
+        </div>
+    </div> -->

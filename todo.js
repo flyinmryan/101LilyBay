@@ -28,13 +28,18 @@ var todo = {
 									"id": eleName
 									}).append(
 										item.category
-										).prepend(
+										).append(
 											item.subCategories.length > 0 ?
-											$("<span>", { 
-												text: unknown,
-												"class": "glyphicon glyphicon-folder-close"
+											$("<span>", {
+												"class": "badge badge-primary badge-pill",
+												text: item.subCategories.length
 											})
 											: ""
+											// $("<span>", { 
+											// 	text: unknown,
+											// 	"class": "glyphicon glyphicon-folder-close"
+											// })
+											// : ""
 										)
 								)
 							)	
@@ -48,6 +53,14 @@ var todo = {
 		    		todo.addSubCats(item, "#collapse" + eleName);
 	    	
 	    });
+
+	    $(".panel").each(function(){
+	    	console.log($(this).find(".list-group-subCat"))
+	    	if ($(this).find(".list-group-item").length == 0) {
+	    		console.log($(this).closest(".panel"))
+	    		$(this).closest(".panel").addClass("inactive");
+	    	}
+	    })
 
 	    $(".list-group-subCat li").each(function(){
 	    	$(this).append(
@@ -360,6 +373,14 @@ var todo = {
             status: "",
             subCategories: [
 				{
+					category: "Top down, bottom up",
+					link: "",
+					image: "blackout.png",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+				{
 					category: "Venetian blinds",
 					link: "https://www.homestratosphere.com/types-blinds/",
 					image: "venetian.png",
@@ -379,14 +400,6 @@ var todo = {
 					category: "Roman",
 					link: "",
 					image: "roman.png",
-					details: "",
-		            status: "",
-		            subCategories: []
-				},
-				{
-					category: "Panel",
-					link: "",
-					image: "panel.png",
 					details: "",
 		            status: "",
 		            subCategories: []
@@ -488,7 +501,16 @@ var todo = {
 			image: "http://s7d2.scene7.com/is/image/Newellsync/86309",
 			details: "Ordered, enroute.",
             status: "complete",
-            subCategories: []
+            subCategories: [
+            	{
+            		category: "Graco Extend2Fit",
+					link: "",
+					image: "https://images-na.ssl-images-amazon.com/images/I/91E1bp4zNtL._SX466_.jpg",
+					details: "Ordered, enroute.",
+		            status: "complete",
+		            subCategories: []
+            	}
+            ]
 		},
 		{
 			category: "Indoor paint",

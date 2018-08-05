@@ -55,10 +55,9 @@ var todo = {
 	    });
 
 	    $(".panel").each(function(){
-	    	console.log($(this).find(".list-group-subCat"))
-	    	if ($(this).find(".list-group-item").length == 0) {
-	    		console.log($(this).closest(".panel"))
-	    		$(this).closest(".panel").addClass("inactive");
+	    	if ((!$(this).hasClass("panel-primary") && !$(this).hasClass("instructions")) && $(this).find(".list-group-item").length == 0) {
+	    		console.log($(this).closest(".panel").children(".panel-heading"));
+	    		$(this).closest(".panel").children(".panel-heading").addClass("inactive");
 	    	}
 	    })
 
@@ -76,7 +75,10 @@ var todo = {
 	    })
 	    $(".panel-title a").click(function () {
 	    	console.log($(this)[0].id);
-	    	window.location = "#" + $(this)[0].id;
+	    	// window.location = "#" + $(this)[0].id;
+    	    $('html, body').animate({
+    	        scrollTop: $(this).offset().top
+	    	}, -2000);	
 	    })
 	},
 	addSubCats: function(item, parentEle){
@@ -375,7 +377,7 @@ var todo = {
 				{
 					category: "Top down, bottom up",
 					link: "",
-					image: "blackout.png",
+					image: "blackout.jpg",
 					details: "",
 		            status: "",
 		            subCategories: []
@@ -384,6 +386,14 @@ var todo = {
 					category: "Venetian blinds",
 					link: "https://www.homestratosphere.com/types-blinds/",
 					image: "venetian.png",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+				{
+					category: "Plantation",
+					link: "https://www.yelp.com/biz_photos/blinds-of-sacramento-citrus-heights-2?select=BRL1kztOdWvCGaV1ICOPdA",
+					image: "plantation.jpg",
 					details: "",
 		            status: "",
 		            subCategories: []

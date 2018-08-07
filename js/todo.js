@@ -2,14 +2,37 @@ $(document).ready(function function_name(argument) {
 	todo.initList();
 })
 
+function compare(a,b) {
+  if (a.subCategories.length > b.subCategories.length)
+    return -1;
+  if (a.subCategories.length < b.subCategories.length)
+    return 1;
+  return 0;
+}
+
+function scrollToPanel(ele, timeout) {
+	setTimeout(function() {
+	 	$('html, body').animate({
+			scrollTop: ele.offset().top - 20
+		});
+	}, timeout);
+}
+
 var todo = {
 	initList: function () {
 		$("li.panel .panel-collapse").each(function(){
     	console.log($(this).children(".list-group").children(".list-group-item").length);//$(this).next().children().children(".list-group-item"));
 	    })
+	    var sortedList = todo.toDoList.sort(compare);
 	    todo.toDoList.forEach(function (item) {
 	    	var eleName = item.category.replace(/[^\w\s]/gi, '').split(" ").join("");
 	    	var unknown = item.details;
+	    	var numberOfDescendants = 0;
+	    	numberOfDescendants += item.subCategories.length;
+	    	item.subCategories.forEach(function(child){
+	    		console.log(numberOfDescendants, child)
+	    		numberOfDescendants += child.subCategories.length;
+	    	})
 	    	$("#accordion>.list-group")
 	    		.append(
 		    		$("<li>", {
@@ -32,7 +55,7 @@ var todo = {
 											item.subCategories.length > 0 ?
 											$("<span>", {
 												"class": "badge badge-primary badge-pill",
-												text: item.subCategories.length
+												text: numberOfDescendants
 											})
 											: ""
 										)
@@ -50,9 +73,11 @@ var todo = {
 	    });
 
 	    $(".panel").each(function(){
-	    	if ((!$(this).hasClass("panel-primary") && !$(this).hasClass("instructions")) && $(this).find(".list-group-item").length == 0) {
-	    		console.log($(this).closest(".panel").children(".panel-heading"));
-	    		$(this).closest(".panel").children(".panel-heading").addClass("inactive");
+	    	var headEle = $(this).closest(".panel").children(".panel-heading");
+	    	console.log(headEle.hasClass("urgent"));
+	    	if ((!$(this).hasClass("panel-primary") && !$(this).hasClass("instructions")) && !headEle.hasClass("complete") && !headEle.hasClass("urgent") && $(this).find(".list-group-item").length == 0) {
+	    		
+	    		headEle.addClass("inactive");
 	    	}
 	    })
 	    $(".up-arrow").click(function () {
@@ -60,11 +85,10 @@ var todo = {
 	    	$(this).closest(".panel-collapse").attr("aria-expanded", "false").removeClass("in");
 	    })
 	    $(".panel-title a").click(function () {
-	    	console.log($(this)[0].id);
-	    	// window.location = "#" + $(this)[0].id;
-    	    $('html, body').animate({
-    	        scrollTop: $(this).offset().top
-	    	}, -2000);	
+	    	if (!$(this).closest(".panel-collapse").hasClass("collapsed")) {
+	    		$(".in").attr("aria-expanded", "false").removeClass("in");
+	    	}
+	    	scrollToPanel($(this), 300);
 	    })
 	},
 	addSubCats: function(item, parentEle){
@@ -130,12 +154,6 @@ var todo = {
 							"class": "up-arrow"
 						})
 					: ""
-					// cat.subCategories.length == 0 ?
-					// $("<img>", {
-					// 	src: "images/up.png",
-					// 	"class": "back-to-top"
-					// })
-					// : ""
 				)
 			)
 			if (cat.subCategories.length > 0) {

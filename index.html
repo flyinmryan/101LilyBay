@@ -2,14 +2,13 @@
 <html>
 <head>
     <title>101 Lily Bay</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-        <link href="lightbox.css" rel="stylesheet" id="bootstrap-css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="fonts/montserrat.css" rel="stylesheet">
+    <script src="js/bootstrap.js"></script>
+        <link href="css/lightbox.css" rel="stylesheet" id="bootstrap-css">
     <style type="text/css">
          body{
-    margin:50px;
      font-family: 'Montserrat', sans-serif;
 }
  #accordion .glyphicon {
@@ -94,6 +93,7 @@
 }
  .instructions .panel-title {
      font-size: 20px;
+     font-weight: 600;
 }
  @media only screen and (max-width: 1080px) {
     body {
@@ -159,16 +159,30 @@
         padding: 5px 7px;
         margin-left: 15px;
     }
+    .up-arrow {
+        background-image: url('images/up.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 20px;
+        width: 32px;
+        margin: 0px;
+        cursor: pointer;
+    }
+    .subCatImg {
+        margin-bottom: 15px;
+    }
+    .lily-bay .column {
+        margin: 0px auto;
+        float: none;
+    }
 }
 
 </style>
-<script type="text/javascript" src="todo.js"></script>
+<script type="text/javascript" src="js/todo.js"></script>
 </head>
 <body>
-
-<div class="">
    <div class="row lily-bay">
-      <div class="col-sm-12 col-md-12 col-sm-12" align="center">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 column" align="center">
          <div class="panel-group" id="accordion">
             <div class="panel panel-primary">
                <div class="panel-heading">
@@ -176,23 +190,22 @@
                </div>
             </div>
             <ul class="list-group">
-            <li class="panel panel-default instructions">
-               <div class="panel-heading">
-                  <h4 class="panel-title">
-                     <div data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><span>
-                        </span>Select a category to expand folder, click an image to enlarge, or click link to open page.
-                     </div>
-                  </h4>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
-</div>
+                <li class="panel panel-default instructions">
+                   <div class="panel-heading">
+                      <h4 class="panel-title">
+                         <div data-toggle="collapse" data-parent="#accordion" href="#collapseSix"><span>
+                            </span>Select a category to expand folder, click an image to enlarge, or click 'more info' to open page.
+                         </div>
+                      </h4>
+                   </div>
+                </li>
+             </ul>
+          </div>
+       </div>
+    </div>
 <div id="images" hidden>
 </div>
-</div>
-    <script src="lightbox.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>
 <!--    <div class="container">

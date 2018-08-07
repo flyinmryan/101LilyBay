@@ -35,11 +35,6 @@ var todo = {
 												text: item.subCategories.length
 											})
 											: ""
-											// $("<span>", { 
-											// 	text: unknown,
-											// 	"class": "glyphicon glyphicon-folder-close"
-											// })
-											// : ""
 										)
 								)
 							)	
@@ -60,18 +55,9 @@ var todo = {
 	    		$(this).closest(".panel").children(".panel-heading").addClass("inactive");
 	    	}
 	    })
-
-	    $(".list-group-subCat li").each(function(){
-	    	$(this).append(
-	    		$("<img>", {
-	    			src: "images/up.png",
-	    			"class": "back-to-top"
-	    		})
-	    	)
-	    })
-	    $(".back-to-top").click(function () {
-	    	console.log($(this).closest(".list-group"));
-	    	$(this).closest(".list-group").slideToggle();
+	    $(".up-arrow").click(function () {
+	    	console.log($(this).closest(".panel-collapse"));
+	    	$(this).closest(".panel-collapse").attr("aria-expanded", "false").removeClass("in");
 	    })
 	    $(".panel-title a").click(function () {
 	    	console.log($(this)[0].id);
@@ -121,20 +107,35 @@ var todo = {
 					: ""
 				).append(
 					cat.image.length > 0 ?
-					$("<div>")
+					$("<div>", {
+						"class": "subCatImg"
+					})
 					.append(
 						$("<a>", {
 							"class": "list-group-item-text",
 							"data-lightbox": "image",
-							"href": "images/" + cat.image
+							"href": (cat.image.indexOf("http") > -1 ? "" : "images/") + cat.image
 						})
 						.append(
 							$("<img>", {
-								"src": "images/" + cat.image
+								"src": (cat.image.indexOf("http") > -1 ? "" : "images/") + cat.image
 							})
 						)
 					)
 					: ""
+				)
+				.append(
+					cat.subCategories.length == 0 ?
+						$("<div>", {
+							"class": "up-arrow"
+						})
+					: ""
+					// cat.subCategories.length == 0 ?
+					// $("<img>", {
+					// 	src: "images/up.png",
+					// 	"class": "back-to-top"
+					// })
+					// : ""
 				)
 			)
 			if (cat.subCategories.length > 0) {
@@ -192,7 +193,7 @@ var todo = {
 			]
 		},
 		{
-			category: "Backyard building",
+			category: "Backyard construction",
 			link: "",
 			image: "",
 			details: "",
@@ -430,7 +431,24 @@ var todo = {
 			image: "",
 			details: "",
             status: "",
-            subCategories: []
+            subCategories: [
+            	{
+					category: "4 leafs",
+					link: "",
+					image: "table.jpg",
+					details: "Naturwood",
+		            status: "",
+		            subCategories: []
+				},
+				{
+					category: "Only $639",
+					link: "",
+					image: "table639dollars.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				}
+            ]
 		},
 		{
 			category: "Couch/Sectional/Seats",
@@ -463,7 +481,16 @@ var todo = {
 			image: "",
 			details: "",
             status: "",
-            subCategories: []
+            subCategories: [
+				{
+					category: "Aqua subway tile",
+					link: "",
+					image: "aqua-subway-tile.png",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+            ]
 		},
 		{
 			category: "Home owner insurance",

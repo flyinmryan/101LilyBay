@@ -434,7 +434,7 @@ var todo = {
             subCategories: [
             	{
 					category: "4 leafs",
-					link: "",
+					link: "https://colemanfurniture.com/toluca-chalk-and-cocoa-bean-132-extendable-rectangular-leg-dining-table.htm",
 					image: "table.jpg",
 					details: "Naturwood",
 		            status: "",
@@ -485,7 +485,7 @@ var todo = {
 				{
 					category: "Aqua subway tile",
 					link: "",
-					image: "aqua-subway-tile.png",
+					image: "aqua-tile.png",
 					details: "",
 		            status: "",
 		            subCategories: []

@@ -600,9 +600,9 @@ var todo = {
 		            subCategories: []
 				},
             	{
-					category: "Beach denim - Sage gray",
+					category: "Bleach denim - Sage gray",
 					link: "",
-					image: "beach-denim-sage-gray.PNG",
+					image: "bleach-denim-sage-gray.PNG",
 					details: "",
 		            status: "",
 		            subCategories: []

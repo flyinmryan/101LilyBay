@@ -83,6 +83,7 @@ var todo = {
 	    $(".up-arrow").click(function () {
 	    	console.log($(this).closest(".panel-collapse"));
 	    	$(this).closest(".panel-collapse").attr("aria-expanded", "false").removeClass("in");
+	    	scrollToPanel($(this).parents().find(".panel-title a"), 300);
 	    })
 	    $(".panel-title a").click(function () {
 	    	if (!$(this).closest(".panel-collapse").hasClass("collapsed")) {
@@ -382,8 +383,6 @@ var todo = {
 					details: "Can buy fruit bearing for $60.",
 					subCategories: []
 				},
-
-
 			]
 		},
 		{
@@ -511,20 +510,29 @@ var todo = {
             ]
 		},
 		{
-			category: "Home owner insurance",
+			category: "Mason's Birthday",
 			link: "",
 			image: "",
 			details: "",
             status: "urgent",
-            subCategories: []
-		},
-		{
-			category: "Birthday invites",
-			link: "",
-			image: "",
-			details: "",
-            status: "",
-            subCategories: []
+            subCategories: [
+	            {
+	            	category: "Birthday invites",
+					link: "",
+					image: "",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+	            {
+					category: "Birthday location",
+					link: "",
+					image: "",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+			]
 		},
 		{
 			category: "Ask guys to help move",
@@ -543,12 +551,21 @@ var todo = {
             subCategories: []
 		},
 		{
-			category: "Choose home insurance",
+			category: "Home owner's insurance",
 			link: "",
 			image: "",
 			details: "",
-            status: "",
-            subCategories: []
+            status: "urgent",
+            subCategories: [
+            	{
+					category: "USAA Home/Auto Insurance",
+					link: "https://www.usaa.com/inet/pchomeowner/issue/entry?11&productId=pnc-insurance-homeowners&jump=jp_homeowners_ins&flowExecutionKey=e1s1&windowId=2",
+					image: "usaa-home.jpg",
+					details: "Quoted $57/mo",
+		            status: "urgent",
+		            subCategories: []
+				},
+           ]
 		},
 		{
 			category: "Car seat",
@@ -572,24 +589,50 @@ var todo = {
 			link: "",
 			image: "",
 			details: "",
-            status: "",
-            subCategories: []
-		},
-		{
-			category: "Backsplash",
-			link: "",
-			image: "",
-			details: "",
-            status: "",
-            subCategories: []
-		},
-		{
-			category: "USAA Home/Auto Insurance",
-			link: "",
-			image: "",
-			details: "",
-            status: "",
-            subCategories: []
+            status: "urgent",
+            subCategories: [
+            	{
+					category: "Absolute zero - Sage gray",
+					link: "",
+					image: "absolute-zero-sage-gray.PNG",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+            	{
+					category: "Beach denim - Sage gray",
+					link: "",
+					image: "beach-denim-sage-gray.PNG",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+            	{
+					category: "Windsurf",
+					link: "",
+					image: "windsurf.PNG",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+            	{
+					category: "Evaporation - Sage gray",
+					link: "",
+					image: "evaporation-sage-gray.PNG",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+            	{
+					category: "Moth gray - Evaporation",
+					link: "",
+					image: "moth-gray-evaporation.PNG",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+
+            ]
 		},
 		{
 			category: "Washer/dryer",
@@ -605,7 +648,65 @@ var todo = {
 			image: "",
 			details: "",
             status: "",
-            subCategories: []
+            subCategories: [
+				{
+					category: "Trundle bed with bookcase",
+					link: "https://www.pinterest.com/pin/385620786837260527/",
+					image: "bed1.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},		
+				{
+					category: "Sleigh bed",
+					link: "https://www.wayfair.com/baby-kids/pdp/kidkraft-addison-sleigh-bed-kk2590.html?piid=12413245",
+					image: "bed2.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+						{
+					category: "Turbocharged",
+					link: "https://www.wayfair.com/baby-kids/pdp/step2-turbocharged-twin-car-bed-tcxz1019.html",
+					image: "turbo.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+				{
+					category: "Slide bed",
+					link: "http://vurni.com/multifunctional-kids-beds/",
+					image: "slide.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+				{
+					category: "Excavator",
+					link: "https://www.pinterest.com/pin/688276755527343980/",
+					image: "excavator.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+				{
+					category: "Desk with bed above",
+					link: "http://www.jasonyost.me/25556/mesmerizing-space-saver-bedroom/space-saver-bedroom-105-best-bedroom-amazing-space-saving-bedroom/",
+					image: "bed3.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+				{
+					category: "Corner combo",
+					link: "http://www.jasonyost.me/25556/mesmerizing-space-saver-bedroom/space-saver-bedroom-130-ordinary-bed-design-space-saving-kids-beds/",
+					image: "bed4.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+            	
+            ]
 		},
 		{
 			category: "Dog door",
@@ -613,7 +714,40 @@ var todo = {
 			image: "",
 			details: "",
             status: "",
-            subCategories: []
+            subCategories: [
+            	{
+					category: "Amazon choice - $199",
+					link: "https://www.amazon.com/gp/product/B0009YYOC2/ref=s9_acsd_simh_hd_bw_b3FMGCB_c_x_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-3&pf_rd_r=EAMRG3CM543V1BQJZDYP&pf_rd_t=101&pf_rd_p=8fa9a209-7b68-5753-a085-d7035f91f5db&pf_rd_i=2975349011&th=1",
+					image: "dog1.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},,
+				{
+					category: "Minimum $700",
+					link: "https://www.petdoorstore.com/pet-doors/pet-door-guys-through-glass-doggy-door/?sku=PDG&gclid=CjwKCAjwhqXbBRAREiwAucoo-69PDPq3bqA9ju38wSbnKLB87VVy3uTGPbrj8c8_yYKhir4uZif6RxoCDAAQAvD_BwE",
+					image: "dog4.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+				{
+					category: "$139",
+					link: "https://www.amazon.com/gp/product/B00180WWY8/ref=s9_acsd_simh_hd_bw_b3FMGCB_c_x_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-3&pf_rd_r=EAMRG3CM543V1BQJZDYP&pf_rd_t=101&pf_rd_p=8fa9a209-7b68-5753-a085-d7035f91f5db&pf_rd_i=2975349011&th=1",
+					image: "dog2.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+				{
+					category: "$159",
+					link: "https://www.amazon.com/gp/product/B0017JVT7G/ref=s9_acsd_simh_hd_bw_b3FMGCB_c_x_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-3&pf_rd_r=EAMRG3CM543V1BQJZDYP&pf_rd_t=101&pf_rd_p=8fa9a209-7b68-5753-a085-d7035f91f5db&pf_rd_i=2975349011",
+					image: "dog3.jpg",
+					details: "",
+		            status: "",
+		            subCategories: []
+				},
+            ]
 		}
 	],
 };

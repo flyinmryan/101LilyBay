@@ -570,8 +570,8 @@ var todo = {
 		{
 			category: "Car seat",
 			link: "",
-			image: "http://s7d2.scene7.com/is/image/Newellsync/86309",
-			details: "Ordered, enroute.",
+			image: "",
+			details: "",
             status: "complete",
             subCategories: [
             	{

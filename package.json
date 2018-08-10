@@ -1,0 +1,30 @@
+{
+  "name": "101lilybay",
+  "version": "1.0.0",
+  "description": "To do list for our new house",
+  "main": "app.js",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "express": "^4.16.3",
+    "jquery": "^1.12.4",
+    "lightbox2": "^2.10.0",
+    "mongod": "^2.0.0",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.7",
+    "popper.js": "^1.14.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "Success!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyinmryan/101LilyBay.git"
+  },
+  "author": "Mike Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flyinmryan/101LilyBay/issues"
+  },
+  "homepage": "https://github.com/flyinmryan/101LilyBay#readme"
+}

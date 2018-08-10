@@ -2,29 +2,13 @@ $(document).ready(function function_name(argument) {
 	todo.initList();
 })
 
-function compare(a,b) {
-  if (a.subCategories.length > b.subCategories.length)
-    return -1;
-  if (a.subCategories.length < b.subCategories.length)
-    return 1;
-  return 0;
-}
-
-function scrollToPanel(ele, timeout) {
-	setTimeout(function() {
-	 	$('html, body').animate({
-			scrollTop: ele.offset().top - 20
-		});
-	}, timeout);
-}
-
 var todo = {
 	initList: function () {
 		$("li.panel .panel-collapse").each(function(){
     	console.log($(this).children(".list-group").children(".list-group-item").length);//$(this).next().children().children(".list-group-item"));
 	    })
-	    var sortedList = todo.toDoList.sort(compare);
-	    todo.toDoList.forEach(function (item) {
+	    var sortedList = todo.todoList.sort(compare);
+	    todo.todoList.forEach(function (item) {
 	    	var eleName = item.category.replace(/[^\w\s]/gi, '').split(" ").join("");
 	    	var unknown = item.details;
 	    	var numberOfDescendants = 0;
@@ -173,7 +157,21 @@ var todo = {
 			}
 		})
 	},
-	toDoList: [
+	compare(a,b) {
+	  if (a.subCategories.length > b.subCategories.length)
+	    return -1;
+	  if (a.subCategories.length < b.subCategories.length)
+	    return 1;
+	  return 0;
+	},
+	scrollToPanel(ele, timeout) {
+		setTimeout(function() {
+		 	$('html, body').animate({
+				scrollTop: ele.offset().top - 20
+			});
+		}, timeout);
+	},
+	todoList: [
 		{
 			category: "Barn style bathroom door",
 			link: "",

@@ -40,11 +40,11 @@ db.once("open", function(){
     		status: item.status,
     		subCategories: item.subCategories
     	})
-    	.save(function (err, listItem) {
-    	    if (err) return console.error(err);
-    	    else console.log("SAVE success!!!!!!!!!", listItem);
-    	});
-
+    	// .save(function (err, listItem) {
+    	//     if (err) return console.error(err);
+    	//     else console.log("SAVE success!!!!!!!!!", listItem);
+    	// });
+    	console.log(listItem2);
     	// Kitten.find(function (err, kittens) {
     	//   if (err) return console.error(err);
     	//   console.log(kittens);

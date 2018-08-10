@@ -568,8 +568,8 @@ var todo = {
 		{
 			category: "Car seat",
 			link: "",
-			image: "http://s7d2.scene7.com/is/image/Newellsync/86309",
-			details: "Ordered, enroute.",
+			image: "",
+			details: "",
             status: "complete",
             subCategories: [
             	{
@@ -598,9 +598,9 @@ var todo = {
 		            subCategories: []
 				},
             	{
-					category: "Beach denim - Sage gray",
+					category: "Bleach denim - Sage gray",
 					link: "",
-					image: "beach-denim-sage-gray.PNG",
+					image: "bleach-denim-sage-gray.PNG",
 					details: "",
 		            status: "",
 		            subCategories: []

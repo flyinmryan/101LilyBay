@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "101lilybay",
   "version": "1.0.0",
   "description": "To do list for our new house",
@@ -16,15 +17,37 @@
   "devDependencies": {},
   "scripts": {
     "test": "Success!"
+=======
+  "name": "101LilyBay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> 01eb32087ef004a8aa5f3864f0d921fe16218e5b
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flyinmryan/101LilyBay.git"
   },
+<<<<<<< HEAD
   "author": "Mike Ryan",
+=======
+  "keywords": [],
+  "author": "",
+>>>>>>> 01eb32087ef004a8aa5f3864f0d921fe16218e5b
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/flyinmryan/101LilyBay/issues"
   },
+<<<<<<< HEAD
   "homepage": "https://github.com/flyinmryan/101LilyBay#readme"
+=======
+  "homepage": "https://github.com/flyinmryan/101LilyBay#readme",
+  "dependencies": {
+    "@octokit/rest": "^15.9.5",
+    "github-db": "^1.1.3",
+    "parse-github-repo-url": "^1.4.1"
+  }
+>>>>>>> 01eb32087ef004a8aa5f3864f0d921fe16218e5b
 }

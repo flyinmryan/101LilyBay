@@ -1,5 +1,5 @@
 $(document).ready(function function_name(argument) {
-	todo.initList();
+	// todo.initList();
 })
 
 var todo = {

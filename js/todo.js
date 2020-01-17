@@ -5,7 +5,7 @@ $(document).ready(function function_name(argument) {
 var todo = {
 	initList: function () {
 		$("li.panel .panel-collapse").each(function(){
-    	console.log($(this).children(".list-group").children(".list-group-item").length);//$(this).next().children().children(".list-group-item"));
+    	//console.log($(this).children(".list-group").children(".list-group-item").length);//$(this).next().children().children(".list-group-item"));
 	    })
 	    var sortedList = todo.todoList.sort(compare);
 	    todo.todoList.forEach(function (item) {
@@ -14,7 +14,7 @@ var todo = {
 	    	var numberOfDescendants = 0;
 	    	numberOfDescendants += item.subCategories.length;
 	    	item.subCategories.forEach(function(child){
-	    		console.log(numberOfDescendants, child)
+	    		//console.log(numberOfDescendants, child)
 	    		numberOfDescendants += child.subCategories.length;
 	    	})
 	    	$("#accordion>.list-group")
